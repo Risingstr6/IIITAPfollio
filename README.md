@@ -51,7 +51,7 @@ This system has a ‘Home’ page from where the admin,students and user can log
 
 Search a user by using full-email here is a sample pic
 
-![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(63).png)
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(64).png)
 
 Login Page looks like this.
 
@@ -66,7 +66,7 @@ If someone has forgot his/her password, she will get temporary password through 
 ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(63).png)
 
 
-![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(65).png)
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/mail.png)
 
 
 
