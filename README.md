@@ -51,11 +51,11 @@ This system has a ‘Home’ page from where the admin,students and user can log
 
 Login Page looks like this.
 
-[image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(61).png)
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(61).png)
 
-‘Contact’ page allows users to provide feedback or queries about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
+Sign Up Page goes like this
 
-![image](https://user-images.githubusercontent.com/36665975/66569890-157c6980-eb8a-11e9-9b2f-c0e8a6ef702e.png)
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(62).png)
 
 The ‘Home’ page consists of 3 modules:
 1. Patient Module
