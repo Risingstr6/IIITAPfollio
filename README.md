@@ -47,11 +47,11 @@ Live Demo : [Hospital Management System - 000webhost by Kishan](https://kishan07
 ## GETTING INTO THE PROJECT:
 This system has a ‘Home’ page from where the admin,students and user can login into their accounts by toggling the tabs accordingly. Fig 1.1 shows the ‘Home’ page of our project.
 
-![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/assets/images/Screenshot%20(60).png)
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(60).png)
 
-'About Us' page (Fig 1.2)  allows us to get some more information about the quality and the services of the hospital.
+Login Page looks like this.
 
-![image](https://user-images.githubusercontent.com/36665975/66569816-f4b41400-eb89-11e9-9377-d9ce53ded088.png)
+[image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(61).png)
 
 ‘Contact’ page allows users to provide feedback or queries about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
 
