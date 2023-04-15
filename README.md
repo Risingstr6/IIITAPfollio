@@ -49,6 +49,10 @@ This system has a ‘Home’ page from where the admin,students and user can log
 
 ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(60).png)
 
+Search a user by using full-email here is a sample pic
+
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(63).png)
+
 Login Page looks like this.
 
 ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(61).png)
@@ -57,10 +61,14 @@ Sign Up Page goes like this
 
 ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(62).png)
 
-The ‘Home’ page consists of 3 modules:
-1. Patient Module
-2. Doctor Module
-3. Admin Module
+If someone has forgot his/her password, she will get temporary password through her email.
+
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(63).png)
+
+
+![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(65).png)
+
+
 
 ### Patient Module:
 
