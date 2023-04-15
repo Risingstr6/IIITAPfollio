@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+body{
+   width: 100%;
+   min-height: 100vh;
+   overflow: hidden;
+   background: #bccbe4;
+}
+
+a{
+   text-decoration: none;
+   text-decoration-line: none;
+}
+
+.search_container{
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.search_form{
+   color: #281a1a;
+  display: flex;
+  padding: 2px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  margin: 0 0 30px;
+  justify-content: space-between;
+}
+
+input[type="search"] {
+   border: none;
+   background: transparent;
+   margin: 0;
+   padding: 7px 8px;
+   font-size: 14px;
+   color: inherit;
+   border: 1px solid transparent;
+   border-radius: inherit;
+ }
+ 
+ input[type="search"]::placeholder {
+   color: #171414;
+ }
+ 
+ button[type="submit"] {
+   text-indent: -999px;
+   overflow: hidden;
+   width: 46px;
+   padding: 0;
+   margin: 0;
+   border: 1px solid transparent;
+   border-radius: inherit;
+   background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+   cursor: pointer;
+   opacity: 0.7;
+ }
+ 
+ button[type="submit"]:hover {
+   opacity: 1;
+ }
+ 
+ button[type="submit"]:focus,
+ input[type="search"]:focus {
+   box-shadow: 0 0 3px 0 #1183d6;
+   border-color: #1183d6;
+   outline: none;
+ }
+ 
+ form.nosubmit {
+  border: none;
+  padding: 0;
+ }
+ 
+
+section{
+   width: 100%;
+   position: relative;
+}
+.navbar{
+   width: 100%;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.2vw 6vw;
+   background: #bccbe4;
+   z-index: 1000;
+}
+.logo{
+   display: flex;
+   font-size: 30px;
+   /* font-weight: 8; */
+   color: #000000;
+   letter-spacing: 2px;
+   cursor: pointer;
+   /* text-transform: uppercase; */
+}
+.menuitems{
+   display: flex;
+   margin: auto 0;
+}
+.menuitems li{
+   list-style: none;
+   margin: 0 1.5vw;
+}
+.menuitems li a{
+   display: block;
+   color: #000000;
+   font-size: 1.3vw;
+   letter-spacing: 2px;
+   text-decoration: none;
+   /* text-transform: uppercase; */
+}
+.menuitems li:hover a{
+   color: #027ca5;
+}
+.container{
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.text_container{
+   width: 50%;
+   padding-left: 4rem;
+   padding-top: 0rem;
+}
+.text_container h2{
+   color: z#527fe1;
+   font-size: 8.5vw;
+   font-weight: 700;
+   line-height: 10vw;
+   text-transform: capitalize;
+}
+.text_container h2::first-line{
+   color: #fff;
+   letter-spacing: 5px;
+   text-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.text_container h5{
+   color: #000000;
+   font-size: 2vw;
+   font-weight: 300;
+   text-align: left;
+   margin-top: 20px;
+   margin-right: 10vw;
+   text-transform: capitalize;
+}
+.text_container p{
+   font-size: 1vw;
+   font-weight: 400;
+   color: #f2f2f2;
+   margin-top: 30px;
+}
+.text_container .btn{
+   display: inline-block;
+   color: #222;
+   background: #fff;
+   margin-top: 2vw;
+   font-size: 1.5vw;
+   text-decoration: none;
+   text-transform: capitalize;
+   letter-spacing: 2px;
+   padding: 6px 15px;
+   box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+   transition: 0.3s ease;
+}
+.text_container .btn:hover{
+   letter-spacing: 3px;
+   padding: 6px 18px;
+}
+
+.image_container{
+   display: flex;
+   width: 50%;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.imgbox{
+   position: relative;
+   min-width: 70vh;
+   margin-right: 10vw;
+   z-index: 1;
+}
+.imgbox img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.icons{
+   position: fixed;
+   top: 50%;
+   right: -15vw;
+   transform: translateY(-50%);
+   z-index: 1000;
+}
+.icons .fa{
+   width: 20vw;
+   padding: 1vw;
+   font-size: 2.5vw;
+   cursor: pointer;
+   background: #fff;
+   transition: 0.5s ease;
+}
+.icons .fa:hover{
+   color: #fd4a2b;
+   transform: translateX(-8vw);
+}
+.icons .fa span{
+   position: relative;
+   font-size: 1.8vw;
+   bottom: 0.3vw;
+   margin-left: 1.8vw;
+}
+/* now create an animated blob without SVG */
+.animblob{
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   height: 37vw;
+   width: 36vw;
+   transform: translate(-50%,-50%);
+   background: #fff;
+   animation: animate_blob 8s linear infinite;
+}
+@keyframes animate_blob{
+   0%,100%{
+      border-radius: 45% 55% 70% 35% / 70% 30% 90% 40%;
+   }
+   25%{
+      border-radius: 55% 45% 30% 35% / 50% 30% 60% 10%;
+   }
+   50%{
+      border-radius: 65% 35% 35% 65% / 40% 60% 30% 70%;
+   }
+   25%{
+      border-radius: 35% 65% 60% 40% / 70% 30% 40% 60%;
+   }
+}
+input{
+   display: inline-block;
+   -webkit-appearance: none
+}
+.navbar label{
+   display: none;
+}
+/* now make it responsive */
+@media screen and (max-width: 900px) {
+   body{
+      overflow: auto;
+   }
+   .logo{
+      font-size: 5vw;
+   }
+   .navbar label{
+      display: block;
+      color: #fff;
+      font-size: 4vw;
+      padding: 1vw 1.5vw;
+      background: #000;
+      cursor: pointer;
+      z-index: 1000;
+   }
+   .menuitems{
+      position: fixed;
+      top: 0;
+      right: -40vw;
+      width: 40vw;
+      height: 100%;
+      background: #fff;
+      padding-top: 15vw;
+      padding-left: 5vw;
+      display: flex;
+      flex-direction: column;
+      transition: 0.3s ease;
+   }
+   .menuitems li a{
+      color: #fd4a2b;
+      font-size: 4vw;
+      margin: 0.5vw 0;
+   }
+   #check:checked ~ section .navbar .menuitems{
+      right: 0;
+   }
+   .container{
+      flex-wrap: wrap;
+   }
+   .text_container{
+      width: 100%;
+      padding: 15vw 10vw;
+      z-index: 100;
+   }
+   .text_container h2{
+      font-size: 18vw;
+      line-height: 18vw;
+   }
+   .text_container h5{
+      font-size: 5vw;
+   }
+   .text_container p{
+      font-size: 3vw;
+   }
+   .text_container .btn{
+      margin-top: 2vw;
+      font-size: 2.5vw;
+   }
+   .image_container{
+      width: 100%;
+      height: 50rem;
+      margin-top: -100px;
+      overflow: hidden;
+   }
+   .imgbox{
+      height: 800px;
+      margin: 0;
+   }
+   .icons{
+      position: fixed;
+      z-index: 100;
+   }
+   .icons .fa{
+      padding: 1.7vw;
+   }
+   /* now customize scroll bar */
+   ::-webkit-scrollbar{
+      width: 12px;
+   }
+   ::-webkit-scrollbar-track{
+      background-color: #000;
+   }
+   ::-webkit-scrollbar-thumb{
+      background-color: #fff;
+      border-radius: 50px;
+   }
+}
