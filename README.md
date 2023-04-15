@@ -45,7 +45,7 @@ Live Demo : [Hospital Management System - 000webhost by Kishan](https://kishan07
 <p align="center"><img src="https://user-images.githubusercontent.com/36665975/59350977-fcc68900-8d3a-11e9-9450-e5c478497caa.png"></img></p>
 
 ## GETTING INTO THE PROJECT:
-Hospital Management System in php and mysql. This system has a ‘Home’ page from where the patient, doctor & administrator can login into their accounts by toggling the tabs accordingly. Fig 1.1 shows the ‘Home’ page of our project.
+This system has a ‘Home’ page from where the admin,students and user can login into their accounts by toggling the tabs accordingly. Fig 1.1 shows the ‘Home’ page of our project.
 
 ![image](https://user-images.githubusercontent.com/36665975/66569676-ad2d8800-eb89-11e9-94e5-ea407622a1fe.png)
 
