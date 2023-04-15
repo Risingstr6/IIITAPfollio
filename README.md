@@ -88,9 +88,6 @@ After user has successfully logged in, he/she can edit his/her academic or non-a
   ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(67).png)
 
  On validation, respective student gets mail for validation of his request.
-
-  ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(68).png)
-
  On rejection, respective student gets mail for rejection of his request, with his details getting reset for that particular request.
  
   ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(69).png)
@@ -98,5 +95,9 @@ After user has successfully logged in, he/she can edit his/her academic or non-a
   We also provide the admin with a dark mode and a logout button to logout.
   
   ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(70).png)
+  
+  The admin also gets to see users feedback on what they think of the site
+  
+   ![image](https://github.com/Risingstr6/IIITAPfollio/blob/main/ss/Screenshot%20(71).png)
 
 
