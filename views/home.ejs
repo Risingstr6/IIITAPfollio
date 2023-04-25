@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>about me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/home.css">
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</head>
+<body>
+    <!-- <button id="cmd" onclick="downloadPDF()">Download PDF</button> -->
+    <%let a=code;if(a==='home'){%>
+    <section>
+        <div class="navbar">
+            <div class="logo">
+               <img src="/images/IIITA_Logo.png" style="width: 60px; height: 50px; margin-top: 0px; padding-right:10px ;" alt="">
+               IIITApfolio</div>
+            <ol class="menuitems">
+                <li><a href="/">Home</a></li> 
+                <li><a href="/cpass">Change Password</a></li> 
+               <li><a href="/du">Delete Profile</a></li>
+               <li><a href="/logout">Logout</a></li>
+            </ol>
+         </div>
+    </section>
+    <%}%> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<div class="container">
+<div class="row" >
+<div class="col-lg-4 col-xl-4">
+<div class="card-box text-center" >
+<img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle avatar-xl img-thumbnail" alt="profile-image">
+<h4 class="mb-0"><%=message.name%></h4>
+<p class="text-muted">@<%=message.role%></p>
+<div class="text-left mt-3" id="ejs-content">
+<h4 class="font-13 text-uppercase">About Me :</h4>
+<p class="text-muted font-13 mb-3"><%=message.about_me%></p>
+<p class="text-muted mb-2 font-13"><strong>Full Name :</strong> <span class="ml-2"><%=message.name%></span></p>
+<p class="text-muted mb-2 font-13"><strong>Mobile :</strong><span class="ml-2"><%=message.phone%></span></p>
+<p class="text-muted mb-1 font-13"><strong>Email :</strong> <span class="ml-2"><%=message.email%></span></p>
+<p class="text-muted mb-1 font-13"><strong>Address :</strong> <span class="ml-2"><%=message.address%></span></p>
+<p class="text-muted mb-1 font-13"><strong>College :</strong> <span class="ml-2">IIIT-A</span></p>
+<p class="text-muted mb-1 font-13"><strong>Current Semester :</strong> <span class="ml-2"><%=message.cur_sem%></span></p>
+<p class="text-muted mb-1 font-13"><strong>Current CGPA :</strong> <span class="ml-2"><%=message.cur_cgpa%></span></p>
+<p class="text-muted mb-1 font-13"><strong>Ten boards :</strong> <span class="ml-2"><%=message.ten_marks%></span></p>
+<p class="text-muted mb-1 font-13"><strong>Twelve boards :</strong> <span class="ml-2"><%=message.twelve_marks%></span></p>
+</div>
+
+<ul class="social-list list-inline mt-3 mb-0">
+    <li class="list-inline-item">
+        <a href="<%=message.linkedin%>" class="social-list-item border-danger text-danger"><i class="fab fa-linkedin"></i></a>
+    </li>
+    <li class="list-inline-item">
+        <a href="<%=message.twitter%>" class="social-list-item border-info text-info"><i class="fab fa-twitter"></i></a>
+    </li>
+    <li class="list-inline-item">
+        <a href="<%=message.github%>" class="social-list-item border-secondary text-secondary"><i class="fab fa-github"></i></a>
+    </li>
+</ul>
+
+</div> 
+<div class="card-box">
+<h4 class="header-title">Skills</h4>
+<% for(let i in skill){%>
+    <%if(i=='email'||skill[i]==''||skill[i]==null) continue;%>
+<%let var1=skill[i].substring (0, skill[i].indexOf (' '));%>
+<%let var2=skill[i].substring (skill[i].indexOf (' ')+1);%>
+<div class="mt-2 pt-1">
+<h6 class="text-uppercase mt-0"><%=var1%><span class="float-right"><%=var2%>%</span></h6>
+<div class="progress progress-sm m-0">
+<div class="progress-bar bg-purple" role="progressbar" aria-valuenow="<%=var2%>" aria-valuemin="0" aria-valuemax="100" style="width:<%=var2%>%">
+<span class="sr-only"><%=var2%>% Complete</span>
+</div>
+</div>
+</div>
+<%}%>   
+</div> 
+</div> 
+<div class="col-lg-8 col-xl-8">
+<div class="card-box">
+<ul class="nav nav-pills navtab-bg">
+<li class="nav-item">
+<a href="#academic-details" data-toggle="tab" aria-expanded="true" class="nav-link ml-0 active">
+<i class="mdi mdi-face-profile mr-1"></i>Academic Details
+</a>
+</li>
+<li class="nav-item">
+    <a href="#non-academic-details" data-toggle="tab" aria-expanded="true" class="nav-link ml-0">
+    <i class="mdi mdi-face-profile mr-1"></i>Non Academic Details
+    </a>
+    </li>
+    <%if(a==='home'){%>
+<li class="nav-item">
+<a href="#edit" data-toggle="tab" aria-expanded="false" class="nav-link">
+<i class="mdi mdi-settings-outline mr-1"></i>Edit
+</a>
+</li>
+<li class="nav-item">
+<a href="#reset" data-toggle="tab" aria-expanded="false" class="nav-link">
+<i class="mdi mdi-settings-outline mr-1"></i>Reset Details
+</a>
+</li>
+<%}%>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="academic-details">
+<h5 class="mb-4 text-uppercase"><i class="mdi mdi-briefcase mr-1"></i>
+Education</h5>
+<ul class="list-unstyled timeline-sm">
+    <%let c=0;%>
+    <% for(let i in acad){%>
+        <%if(i=='email'||acad[i]==null) continue;%>
+        <%if(c==0||c==4||c==7){%>
+        <li class="timeline-sm-item"> 
+         <%}%>
+         <%if(c==0){%>
+        <h5 class="mt-0 mb-1">Course Work :</h5>
+         <%}%>
+        <%if(c==4){%>
+        <h5 class="mt-0 mb-1">Academic Awards :</h5>
+        <%}%>
+        <%if(c==7){%>
+        <h5 class="mt-0 mb-1">Research Papers Published :</h5>
+        <%}%>
+        <p class="text-muted mt-2"><%=acad[i]%></p>
+        <%if(c==3||c==6||c==9){%>
+        </li>
+        <%}%>
+        <%++c%>
+    <%}%>
+</ul>
+<h5 class="mb-3 mt-4 text-uppercase"><i class="mdi mdi-cards-variant mr-1"></i>Course Projects</h5>
+<div class="table-responsive">
+    <table class="table table-border mb-0">
+    <thead class="thead-light">
+    <tr>
+    <th>Project Name</th>
+    <th>Tech Stack</th>
+    <th>Status</th>
+    <th>Subject</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% for(let i in nacad){%>
+            <%if(nacad[i]==null) continue;%>
+            <%if(i[0]=='p') {%>
+            <%let pos1 = nacad[i].indexOf ('/');%>
+            <%let name=nacad[i].substring (0, pos1);%>
+            <%let pos2 = nacad[i].indexOf ('/',pos1+1);%>
+            <%let tech=nacad[i].substring (pos1+1,pos2);%>
+            <%let pos3 = nacad[i].indexOf ('/',pos2+1);%>
+            <%let status = nacad[i].substring (pos2+1,pos3);%>
+            <%let sub = nacad[i].substring (pos3+1);%>
+    <tr>
+        <td><%=name%></td>
+        <td><%=tech%></td>
+        <td><span class="badge badge-info"><%=status%></span></td>
+        <td><%=sub%></td>
+    </tr>
+    <%}%>
+    <%}%>   
+    </tbody>
+    </table>
+    </div>
+</div>
+<div class="tab-pane" id="non-academic-details">
+    <h5 class="mb-4 text-uppercase"><i class="mdi mdi-briefcase mr-1"></i>
+    Experience</h5>
+    <ul class="list-unstyled timeline-sm">
+    <li class="timeline-sm-item">
+    <h5 class="mt-0 mb-3">Coding Profiles</h5>
+    <a href="<%=nacad.cp1%>"><p class="text-muted mb-1 font-13"><strong>Leetcode</strong> </p></a>
+    <a href="<%=nacad.cp2%>"><p class="text-muted mb-1 font-13"><strong>Codeforces</strong> </p></a>
+    </li>
+    <li class="timeline-sm-item">
+    <h5 class="mt-0 mb-3">Coding Achievements</h5>
+    <% for(let i in nacad){%>
+        <%if(i=='cpa1'||i=='cpa2'||i=='cpa3') {%>
+    <p class="text-muted mt-2"><%=nacad[i]%></p>
+      <%}%>  
+    <%}%>  
+    </li>
+    <li class="timeline-sm-item">
+        <h5 class="mt-0 mb-1">Hackathons</h5>
+        <% for(let i in nacad){%>
+            <%if(i[0]=='h') {%>
+        <p class="text-muted mt-2 mb-0"><%=nacad[i]%></p>
+        <%}%>  
+    <%}%>  
+    </li>
+    <li class="timeline-sm-item">
+        <h5 class="mt-0 mb-1">Co-curricular Activities</h5>
+        <% for(let i in nacad){%>
+            <%if(i.length==4 && i.substring(0,3)=="cca") {%>
+        <p class="text-muted mt-2 mb-0"><%=nacad[i]%></p>
+        <%}%>  
+    <%}%> 
+    </li>
+    </ul>
+    
+    <h5 class="mb-3 mt-4 text-uppercase"><i class="mdi mdi-cards-variant mr-1"></i>
+    Internships</h5>
+    <div class="table-responsive">
+    <table class="table table-borderless mb-0">
+    <thead class="thead-light">
+    <tr>
+    <th >Interned at</th>
+    <th>Duration</th>
+    <th>Worked upon</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>App design and development</td>
+    <td>May to July 2022</td>
+    <td>Halette Boivin</td>
+    </tr>
+    <tr>
+    <td>Coffee detail page - Main Page</td>
+    <td>May to July 2022</td>
+    <td>Durandana Jolicoeur</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+<div class="tab-pane" id="edit">
+    <div>
+        <span>
+            <a href="/acad" target="targetframe"><button type="button" class="button">Edit Academic Details</button></a>
+        </span>
+        
+        <span>
+            <a href="/nacad" target="targetframe"><button type="button" class="button">Edit Non-Academic Details</button></a>
+        </span>
+        
+        <span>
+            <a href="/sb" target="targetframe"><button type="button" class="button">Edit Basic Details</button></a>
+        </span>
+    
+        <span>
+            <a href="/skills" target="targetframe"><button type="button" class="button">Edit Skills</button></a>
+        </span>
+
+    </div>
+    
+    <br>
+    <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+        <iframe width="100%" height="100%"
+          src="" name="targetframe"
+          frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
+        </iframe>
+      </div>
+</div>
+<div class="tab-pane" id="reset">
+    <div>
+        <span>
+            <a href="/reseta"><button type="button" class="button">Reset Academic Details</button></a>
+        </span>
+    
+        <span>
+            <a href="/resetna"><button type="button" class="button">Reset Non-Academic Details</button></a>
+        </span>
+    
+        <span>
+            <a href="/cpass"><button type="button" class="button">Reset password</button></a>
+        </span>
+    </div>
+    
+    
+    <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+        <iframe width="100%" height="100%"
+          src="" name="targetframe"
+          frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
+        </iframe>
+      </div>
+</div>
+
+</div> 
+</div> 
+</div> 
+</div>
+</div>
+<!-- <script>
+   function downloadPDF() {   
+    const doc = new jsPDF();
+    var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+  // Get the current EJS content and add it to the PDF
+  doc.fromHTML($('#ejs-content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+  // Save the PDF and trigger the download
+  doc.save('ejs-content.pdf');
+}
+</script> -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in & Sign up Form</title>
+    <link rel="stylesheet" href="/styles/signstudent.css" />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="/adminsignin" method="post" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="/images/IIITA_Logo.png" alt="easyclass" />
+                <a href="/">
+                  <h4>IIITApfolio</h4>
+                </a>
+                
+              </div>
+
+              <div class="heading">
+                <h2>Hello Admin</h2>
+                <a href="/aforgotpass"><h4>Forgot Password?</h4></a>
+              </div>
+
+            <div class="actual-form" >
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    name="email"
+                    required
+                  />
+                  <label>Email Id</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    name="pass"
+                    required
+                  />
+                  <label>Password</label>
+                </div>
+
+                <input type="submit" value="Sign In" class="sign-btn" />
+           
+                
+              </div>
+            </form>
+
+
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="/images/img3.svg" class="image img-3" alt="" />
+              <img src="/images/img1.svg" class="image img-1 show" alt="" />
+              <img src="/images/img2.svg" class="image img-2" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Login to access admin panel</h2>
+                  <h2>Validate requests!! </h2>
+                  <h2>Login using admin email id</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript file -->
+
+    <script src="/styles/signstudent.js"></script>
+  </body>
+</html>
