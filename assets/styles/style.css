@@ -5,6 +5,10 @@
    box-sizing: border-box;
    font-family: 'Poppins',sans-serif;
 }
+.image2{
+   display: none;
+}
+
 body{
    width: 100%;
    min-height: 100vh;
@@ -84,7 +88,7 @@ section{
 }
 .navbar{
    width: 100%;
-   position: fixed;
+   position: absolute;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -256,6 +260,18 @@ input{
 }
 /* now make it responsive */
 @media screen and (max-width: 900px) {
+   .animblob{
+      display: none;
+   }
+   .image1{
+      display: none;
+   }
+   
+   .image2{
+      display: block;
+      height: 57% !important;
+      width: 99% !important;
+   }
    body{
       overflow: auto;
    }
@@ -285,9 +301,9 @@ input{
       transition: 0.3s ease;
    }
    .menuitems li a{
-      color: #fd4a2b;
-      font-size: 4vw;
-      margin: 0.5vw 0;
+      color: #000000;
+      font-size: 2.8vw;
+      margin: 1.5vw -10px;
    }
    #check:checked ~ section .navbar .menuitems{
       right: 0;
@@ -295,7 +311,11 @@ input{
    .container{
       flex-wrap: wrap;
    }
+   .search_container{
+      margin-top: 10px;
+   }
    .text_container{
+      margin-top: 19px;
       width: 100%;
       padding: 15vw 10vw;
       z-index: 100;
