@@ -680,7 +680,7 @@ app.post("/sb",function(req,res){
             console.log(err);
         }
         if(result.length > 0){
-            db.query('UPDATE student_basic SET ?',{
+           db.query('UPDATE student_basic SET ? WHERE email= ?',[{
                 name: name,
                 role: role,
                 ten_marks: ten_marks,
@@ -693,7 +693,7 @@ app.post("/sb",function(req,res){
                 linkedin: linkedin,
                 twitter: twitter,
                 github: github
-             },function(error,result){
+             },req.session.email],function(error,result){
                 if(error){
                     console.log(error);
                 }
