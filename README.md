@@ -1,5 +1,5 @@
 # Portfolio Management System
-Portfolio Management System using MySQL, NodeJS, HTML & CSS
+Portfolio Management System using MySQL, NodeJS, JavaScript, HTML & CSS
 
 
 Video Demo : [IIITAPfolio System - Youtube](https://youtu.be/AvsqJduQNXA)
@@ -27,7 +27,7 @@ Live Demo : [Portfolio Management System](https://iiitapfolio.onrender.com/)
 5. In phpmyadmin page, create a new database from the left panel and name it as 'portfolio'
 6. Import the file 'portfolio.sql' inside your newly created database and click ok.
 7. Now come to your downloaded folder and make a .env file
-8. In env file, add DB,host,user,password,authemail,authepass,secret according to your database and email authentication pass
+8. In env file, add DB,host,user,password,authemail,authepass,secret according to your database and email authentication pass (see 10.)
 9. Format =>
 	DB = portfolio
 	host = localhost
