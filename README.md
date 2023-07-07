@@ -37,6 +37,7 @@ Live Demo : [Portfolio Management System](https://iiitapfolio.onrender.com/)
 	authepass = aggdkgkdgka
 	secret = MYSECRET
 10.  [Use this video to setup authepass and authemail](https://www.youtube.com/watch?v=thAP7Fvrql4)
+
     
 ### Starting Apache And MySQL in XAMPP:
   The XAMPP Control Panel allows you to manually start and stop Apache and MySQL. To start Apache or MySQL manually, click the ‘Start’ button under ‘Actions’.
