@@ -38,7 +38,7 @@ app.use(session({
         store: sessionStore,      // assigning sessionStore to the session
     }));
 
-
+// connecting database
 db.connect(function(error){
     if(error)
     {
@@ -93,7 +93,7 @@ const redirectALogin = function(req,res,next){
     next();
 }
 
-
+// password generation
 function generatePassword() {
     var length = 12,
         charset = 
@@ -105,7 +105,7 @@ function generatePassword() {
     return password;
 }
 
-
+// API'S
 
 app.get("/",function(req,res){  
     res.render('index',{message:''});
@@ -177,6 +177,7 @@ app.get("/review",function(req,res){
     res.render('review',{message:''});
 })
 
+// fetching data from datbase (SQL)
 app.get("/adminlog",redirectALogin,function(req,res){
 db.query('SELECT * from admin_panel ',function(err,ress)
 {
@@ -904,7 +905,7 @@ app.post("/decline",function(req,res){
         })
         })
 
-
+// server run 
 app.listen(PORT,function(){
     console.log("Server started on port "+PORT);
 });
